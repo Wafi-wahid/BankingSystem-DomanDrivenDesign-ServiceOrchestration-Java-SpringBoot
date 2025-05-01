@@ -1,5 +1,8 @@
 package bank.service;
 
+import bank.domain.Account;
+
 public interface AccountService {
-    // Define account operations (e.g., openAccount, getBalance) here
+    Account createAccount(String accountNumber, Double initialBalance);
+    Double viewBalance(String accountNumber);
 }
