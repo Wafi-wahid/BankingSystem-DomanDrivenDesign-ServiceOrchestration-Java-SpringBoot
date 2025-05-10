@@ -1,8 +1,9 @@
-package bank.service;
+package com.example.bank.service;
 
-import bank.domain.Account;
+import com.example.bank.model.Account;
+
+import java.util.List;
 
 public interface AccountService {
-    Account createAccount(String accountNumber, Double initialBalance);
-    Double viewBalance(String accountNumber);
+    List<Account> getAllAccounts();
 }

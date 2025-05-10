@@ -1,26 +1,18 @@
-package bank.service;
+package com.example.bank.service.impl;
 
-import bank.domain.Account;
-import bank.repository.AccountRepository;
-import bank.service.AccountService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.bank.model.User;
+import com.example.bank.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Service
-public class AccountServiceImpl implements AccountService {
-
-    @Autowired
-    private AccountRepository accountRepository;
-
+public class UserServiceImpl implements UserService {
     @Override
-    public Account createAccount(String accountNumber, Double initialBalance) {
-        Account account = new Account(accountNumber, initialBalance);
-        return accountRepository.save(account);
-    }
-
-    @Override
-    public Double viewBalance(String accountNumber) {
-        Account account = accountRepository.findByAccountNumber(accountNumber);
-        return account != null ? account.getBalance() : null;
+    public List<User> getAllUsers() {
+        return Arrays.asList(
+                new User(1L, "Alice"),
+                new User(2L, "Bob"));
     }
 }
