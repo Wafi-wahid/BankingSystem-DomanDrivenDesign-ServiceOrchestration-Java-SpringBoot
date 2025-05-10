@@ -1,8 +1,11 @@
 bank\controller\AccountController.class
+bank\service\UserServiceImpl.class
 bank\service\AccountServiceImpl.class
+bank\repository\UserRepository.class
 bank\domain\User.class
 bank\repository\AccountRepository.class
 bank\Application.class
+bank\controller\UserController.class
 bank\service\AccountService.class
 bank\domain\Account.class
 bank\service\UserService.class
