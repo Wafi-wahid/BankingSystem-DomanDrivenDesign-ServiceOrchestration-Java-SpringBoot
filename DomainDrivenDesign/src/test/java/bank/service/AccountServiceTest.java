@@ -24,17 +24,17 @@ public class AccountServiceTest {
 
     @Test
     public void testCreateAccount() {
-        String accountNumber = "12345";
-        Double initialBalance = 1000.0;
-        Account mockAccount = new Account(accountNumber, initialBalance);
+        Account inputAccount = new Account("12345", 1000.0);
+        Account savedAccount = new Account("12345", 1000.0);
+        savedAccount.setId(1L);
 
-        when(accountRepository.save(any(Account.class))).thenReturn(mockAccount);
+        when(accountRepository.save(any(Account.class))).thenReturn(savedAccount);
 
-        Account created = accountService.createAccount(accountNumber, initialBalance);
+        Account created = accountService.createAccount(inputAccount);
 
         assertNotNull(created);
-        assertEquals(accountNumber, created.getAccountNumber());
-        assertEquals(initialBalance, created.getBalance());
+        assertEquals("12345", created.getAccountNumber());
+        assertEquals(1000.0, created.getBalance());
         verify(accountRepository, times(1)).save(any(Account.class));
     }
 

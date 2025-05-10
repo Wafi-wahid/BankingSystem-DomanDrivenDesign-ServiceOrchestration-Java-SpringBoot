@@ -1,7 +1,7 @@
-package com.example.bank;
+package bank;
 
-import com.example.bank.service.AccountService;
-import com.example.bank.service.UserService;
+import bank.service.AccountService;
+import bank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

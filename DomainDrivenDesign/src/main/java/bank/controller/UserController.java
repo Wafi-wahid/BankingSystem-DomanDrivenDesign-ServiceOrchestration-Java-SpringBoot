@@ -3,7 +3,6 @@ package bank.controller;
 import bank.domain.User;
 import bank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +17,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        return new ResponseEntity<>(userService.createUser(user), HttpStatus.CREATED);
+        return ResponseEntity.status(201).body(userService.createUser(user));
     }
 
     @GetMapping("/{id}")
