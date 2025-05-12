@@ -1,0 +1,18 @@
+# Maven junk
+target/
+.mvn/
+pom.xml.versionsBackup
+
+# IDE/config
+.idea/
+*.iml
+.vscode/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
