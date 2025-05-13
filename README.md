@@ -1,4 +1,8 @@
-# Bank Record System
+# 🏦 DDD + Orchestration-Based Banking System
+
+This project demonstrates a simple banking system architecture using **Domain-Driven Design (DDD)** principles combined with an **Orchestration**-based service coordination approach. The system includes modular services for users, accounts, transactions, and notifications, along with scalable deployment and testing strategies.
+
+---
 
 ## Introduction
 
@@ -14,3 +18,54 @@ Domain-Driven Design (DDD) helps in separating business logic from infrastructur
 - **Application layer** wires the system with Spring Boot configuration and runtime setup.
 
 By applying DDD, this project becomes easier to test, modify, and scale.
+
+## 🧩 Service Summary
+
+### 🔷 DDD Layer
+- **UserService**
+  - Create & Get User
+  - Unit tested
+- **AccountService**
+  - Create Account & View Balance
+  - Unit tested
+
+### 🔷 Orchestration Layer
+- **TransactionService**
+  - Transfer Money
+  - Unit tested
+- **NotificationService**
+  - Send Email/SMS
+  - Unit tested
+
+---
+
+## 🖼️ Diagrams
+
+All diagrams are available under `/docs/diagrams`:
+
+- ✅ DDD Component Diagram
+- ✅ DDD Package Diagram
+- ✅ Orchestration Component Diagram
+- ✅ Orchestration Package Diagram
+- ✅ Deployment Diagram
+- ✅ Data Flow Diagram (DFD)
+
+---
+
+## 🧪 Testing Instructions
+
+Unit tests are implemented using **Jest**. To run tests:
+
+```bash
+npm install
+npm run test
+```
+
+
+## 🚀 Run Instructions
+🐳 Using Docker (Recommended)
+Build and run the app in a container:
+```bash
+docker build -t banking-app .
+docker run -p 3000:3000 banking-app
+```
